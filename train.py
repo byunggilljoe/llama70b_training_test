@@ -186,7 +186,7 @@ def main(model_args, data_args, training_args):
         },
         dataset_text_field=data_args.dataset_text_field,
         max_seq_length=data_args.max_seq_length,
-        data_collator=DataCollatorWithPadding(tokenizer, padding="max_length", max_length=data_args.max_seq_length)
+        # data_collator=DataCollatorWithPadding(tokenizer, padding="max_length", max_length=data_args.max_seq_length)
     )
     trainer.accelerator.print(f"{trainer.model}")
     if model_args.use_peft_lora:
