@@ -44,7 +44,12 @@ accelerate launch \
     --dataset_text_field "content" \
     --use_flash_attn True \
     --ddp_timeout 5400 \
-    --optim paged_adamw_32bit 
+    --optim adamw_torch
+    # --optim adamw_8bit 
+    # --optim paged_adamw_8bit 
+    # 
+    
+    
 
 #     --push_to_hub \
 #     --hub_private_repo True \
